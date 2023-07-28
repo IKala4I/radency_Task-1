@@ -1,0 +1,30 @@
+.active-notes__table-header {
+    border-radius: 5px;
+    color: white;
+    margin-top: 1em;
+}
+
+.active-notes__table-row {
+    display: grid;
+    grid-template-columns: 5% repeat(5, 17%) 10%;
+    align-items: center;
+    padding: 5px;
+}
+
+.tools {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tools img {
+    width: 1.5em;
+    cursor: pointer;
+}
+
+.tools span:not(:last-child) {
+    padding-right: 10px;
+}
+
+.table-icon__img {
+    width: 2em;
+}

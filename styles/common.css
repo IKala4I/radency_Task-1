@@ -3,3 +3,16 @@
     margin: 0 auto;
     padding: 0 15px;
 }
+
+.notes{
+    display: grid;
+    row-gap: 0.7em;
+}
+
+.table-header{
+    background-color: #646464;
+}
+
+.table-row{
+    background-color: lightcyan;
+}

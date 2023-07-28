@@ -1,0 +1,19 @@
+.add-note {
+    display: flex;
+    padding: 10px 0;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.add-note__img {
+    width: 1.7em;
+    margin-right: 5px;
+}
+
+.add-note__button {
+    padding: 5px;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
