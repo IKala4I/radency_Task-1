@@ -1,4 +1,4 @@
-import {noteCategories} from './helpers/noteCategories'
+import {noteCategories} from './helpers/noteCategories.js'
 
 export const notes = [
     {
