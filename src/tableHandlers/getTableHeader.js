@@ -20,6 +20,13 @@ export const getTableHeader = typeTable => {
                     </span>
                 </div>
             </div>`
+        case tableTypes.summary:
+            return `<div class="table-header summary-table__table-header summary-table__table-row">
+                <div class="table-icon"></div>
+                <h4 class="column-header">Note Category</h4>
+                <h4 class="column-header">Active</h4>
+                <h4 class="column-header">Archived</h4>
+            </div>`
         default:
             return `<div></div>`
     }
