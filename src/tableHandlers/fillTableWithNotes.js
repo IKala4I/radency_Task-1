@@ -21,6 +21,8 @@ const getTableRows = notes => {
 
 
 const createNoteRow = note => {
+    const dates = getDatesFromContent(note.content)
+
     return `<div class="table-row active-notes__table-row">
                 <div class="table-icon">
                     <img class="table-icon__img" src='${iconsPaths.get(note.category)}' alt="cart">
@@ -29,7 +31,7 @@ const createNoteRow = note => {
                 <span class="note-created table-row__span">${note.created}</span>
                 <span class="note-category table-row__span">${note.category}</span>
                 <span class="note-content table-row__span">${note.content}</span>
-                <span class="note-dates table-row__span">${note.dates || ''}</span>
+                <span class="note-dates table-row__span">${dates || ''}</span>
                 <div class="tools table-row-tools">
                     <span class="table-row-tools__tool">
                         <a class="table-row-tools__tool__a">
@@ -50,4 +52,9 @@ const createNoteRow = note => {
                     </span>
                 </div>
             </div>`
+}
+
+const getDatesFromContent = content => {
+    const dateRegex = /\d{1,2}\/\d{1,2}\/\d{4}/g
+    return content.match(dateRegex)
 }

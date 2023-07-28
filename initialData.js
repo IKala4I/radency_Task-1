@@ -3,10 +3,10 @@ import {noteCategories} from './helpers/noteCategories.js'
 export const notes = [
     {
         id: 1,
-        name: 'Shopping list',
+        name: 'Dentist',
         created: 'April 20, 2021',
         category: noteCategories.TASK,
-        content: 'Tomatoes, bread',
+        content: 'I\'m gonna have a dentist appointment on the 22/4/2021, I moved it from 24/4/2021',
         dates: '20/4/2021',
         archived: false
     },
