@@ -1,18 +1,23 @@
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-.notes{
+.notes {
     display: grid;
     row-gap: 0.7em;
+    font-family: sans-serif;
 }
 
-.table-header{
+.table-header {
     background-color: #646464;
 }
 
-.table-row{
+.table-row {
     background-color: lightcyan;
+}
+
+.table-row__span:not(:nth-of-type(1)){
+    color: darkgray;
 }
