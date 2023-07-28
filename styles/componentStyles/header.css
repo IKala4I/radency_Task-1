@@ -1,0 +1,28 @@
+.first-row {
+    background-color: azure;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+.notifications{
+    display: flex;
+    align-items: center;
+}
+
+.notifications__bell{
+    padding-right: 0.5em;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo__image{
+    width: 2em;
+    height: 2em;
+}
