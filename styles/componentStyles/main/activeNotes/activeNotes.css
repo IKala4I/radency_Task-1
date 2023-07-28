@@ -4,7 +4,7 @@
 
 .active-notes__table-row {
     display: grid;
-    grid-template-columns: 5% repeat(5, 17%) 10%;
+    grid-template-columns: 5% 15% 15% 10% 30% 15% 10%;
     align-items: center;
     padding: 7px;
     font-size: 1.2em;
