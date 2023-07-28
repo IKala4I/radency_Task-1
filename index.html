@@ -26,7 +26,7 @@
 </header>
 <main class="main">
     <div class="container">
-        <section class="notes active-notes">
+        <section class="table active-notes">
             <div class="table-header active-notes__table-header active-notes__table-row">
                 <div class="table-icon"></div>
                 <h4 class="column-header">Name</h4>
@@ -74,12 +74,28 @@
                 </div>
             </div>
         </section>
-        <div class="add-note">
+        <section class="add-note">
             <span>
                 <img class="add-note__img" src="./images/plus-logo.svg" alt="plus">
             </span>
             <button class="add-note__button">Create Note</button>
-        </div>
+        </section>
+        <section class="table summary-table">
+            <div class="table-header summary-table__table-header summary-table__table-row">
+                <div class="table-icon"></div>
+                <h4 class="column-header">Note Category</h4>
+                <h4 class="column-header">Active</h4>
+                <h4 class="column-header">Archived</h4>
+            </div>
+            <div class="table-row summary-table__table-row">
+                <div class="table-icon">
+                    <img class="table-icon__img" src="images/icons/cart-icon.svg" alt="cart">
+                </div>
+                <span class="note-category table-row__span">Task</span>
+                <span class="count-active-notes table-row__span">13</span>
+                <span class="count-archived-notes table-row__span">4</span>
+            </div>
+        </section>
     </div>
 </main>
 </body>

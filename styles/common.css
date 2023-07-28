@@ -4,7 +4,7 @@
     padding: 0 15px;
 }
 
-.notes {
+.table {
     display: grid;
     row-gap: 0.7em;
     font-family: sans-serif;
@@ -12,6 +12,8 @@
 
 .table-header {
     background-color: #646464;
+    border-radius: 5px;
+    color: white;
 }
 
 .table-row {
