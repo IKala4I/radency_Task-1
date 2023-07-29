@@ -1,5 +1,5 @@
 import {data} from '../../../initialData.js'
-import {rerenderApp} from '../../index.js'
+import {renderApp} from '../../index.js'
 import {updateObjectInArray} from '../../helpers/updateObjectInArray.js'
 import {toggleEditMode} from './toggleEditMode.js'
 
@@ -8,5 +8,5 @@ export const archive = noteId => {
 
     toggleEditMode(noteId)
 
-    rerenderApp()
+    renderApp()
 }

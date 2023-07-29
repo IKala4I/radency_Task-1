@@ -1,5 +1,5 @@
 import {data} from '../../../initialData.js'
-import {formTypes} from '../../../helpers/formTypes.js'
+import {formTypes} from '../../helpers/formTypes.js'
 
 export const toggleEditMode = noteId => {
     const editFormSelector = `.${formTypes.editNoteForm}`

@@ -1,5 +1,5 @@
 import {data} from '../../initialData.js'
-import {rerenderApp} from '../index.js'
+import {renderApp} from '../index.js'
 
 export const createNote = dataObject => {
     data.notes = [...data.notes, {
@@ -8,7 +8,7 @@ export const createNote = dataObject => {
         created: createTodayDate(),
         archived: false
     }]
-    rerenderApp()
+    renderApp()
 }
 
 const createTodayDate = () => {

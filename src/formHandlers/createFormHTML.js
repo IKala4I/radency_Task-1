@@ -1,4 +1,4 @@
-import {formTypes} from '../../helpers/formTypes.js'
+import {formTypes} from '../helpers/formTypes.js'
 
 export const createFormHTML = formType => {
     const isEditForm = formType === formTypes.editNoteForm

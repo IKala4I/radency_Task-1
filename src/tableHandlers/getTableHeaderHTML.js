@@ -1,4 +1,4 @@
-import {tableTypes} from '../../helpers/tableTypes.js'
+import {tableTypes} from '../helpers/tableTypes.js'
 
 export const getTableHeaderHTML = tableType => {
     switch (tableType) {

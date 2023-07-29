@@ -1,5 +1,5 @@
 import {createFormHTML} from './createFormHTML.js'
-import {formTypes} from '../../helpers/formTypes.js'
+import {formTypes} from '../helpers/formTypes.js'
 import {data} from '../../initialData.js'
 import {setHandlerOnSubmitForm} from './setHandlerOnSubmitForm.js'
 import {createNote} from './createNote.js'

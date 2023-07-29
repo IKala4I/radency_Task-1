@@ -1,5 +1,5 @@
 import {data} from '../../initialData.js'
-import {rerenderApp} from '../index.js'
+import {renderApp} from '../index.js'
 
 export const updateNote = (dataObject, noteId) => {
     const filteredDataObject = Object
@@ -21,5 +21,5 @@ export const updateNote = (dataObject, noteId) => {
             }
         return note
     })
-    rerenderApp()
+    renderApp()
 }

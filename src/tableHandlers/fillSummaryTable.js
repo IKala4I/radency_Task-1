@@ -1,7 +1,7 @@
 import {getTableHeaderHTML} from './getTableHeaderHTML.js'
-import {tableTypes} from '../../helpers/tableTypes.js'
-import {iconsPaths} from '../../helpers/iconPaths.js'
-import {noteCategories} from '../../helpers/noteCategories.js'
+import {tableTypes} from '../helpers/tableTypes.js'
+import {iconsPaths} from '../helpers/iconPaths.js'
+import {noteCategories} from '../helpers/noteCategories.js'
 
 export const fillSummaryTable = (notes, table) => {
     const tableHeader = getTableHeaderHTML(tableTypes.summary)
