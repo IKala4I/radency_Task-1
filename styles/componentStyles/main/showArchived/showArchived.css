@@ -1,0 +1,18 @@
+.show-archived-notes {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.show-archived-notes__img {
+    width: 1.7em;
+    margin-right: 5px;
+}
+
+.show-archived-notes__button {
+    padding: 5px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}

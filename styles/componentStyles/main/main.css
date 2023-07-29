@@ -3,3 +3,4 @@
 @import './notes/notes.css';
 @import './notes/activeNotes/activeNotes.css';
 @import './notes/archivedNotes/archivedNotes.css';
+@import './showArchived/showArchived.css';
