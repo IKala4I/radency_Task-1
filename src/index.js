@@ -4,8 +4,8 @@ import {fillSummaryTable} from './tableHandlers/fillSummaryTable.js'
 import {renderPage} from './helpers/renderPage.js'
 import {fillTableWithArchivedNotes} from './tableHandlers/fillTableWithArchivedNotes.js'
 
-const activeNotesTable = document.querySelector('.active-notes')
-const archivedNotesTable = document.querySelector('.archived-notes')
+const activeNotesTable = document.querySelector('.table-active-notes')
+const archivedNotesTable = document.querySelector('.table-archived-notes')
 const summaryTable = document.querySelector('.summary-table')
 
 export const rerenderApp = (notes = data.notes) => renderPage({

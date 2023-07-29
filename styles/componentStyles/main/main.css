@@ -1,3 +1,5 @@
 @import './addNote/addNote.css';
 @import './summaryTable/summaryTable.css';
 @import './notes/notes.css';
+@import './notes/activeNotes/activeNotes.css';
+@import './notes/archivedNotes/archivedNotes.css';
