@@ -1,7 +1,7 @@
 import {data} from '../../../initialData.js'
 import {rerenderApp} from '../../index.js'
 
-export const showEditForm = noteId => {
+export const showForm = (formType, noteId = null) => {
     const editBlock = document.querySelector('.edit-note-form')
     const closeButton = document.querySelector('.form-block__form__close-button')
     const nameInput = document.getElementById('name')

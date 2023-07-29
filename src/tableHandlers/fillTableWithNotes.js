@@ -4,8 +4,9 @@ import {iconsPaths} from '../../helpers/iconPaths.js'
 import {archive} from './noteHandlers/archiveNote.js'
 import {unarchive} from './noteHandlers/unarchiveNote.js'
 import {remove} from './noteHandlers/removeNote.js'
-import {showEditForm} from './noteHandlers/editNote.js'
 import {data} from '../../initialData.js'
+import {formTypes} from '../../helpers/formTypes'
+import {showForm} from '../formHandlers/showForm.js'
 
 export const fillTableWithNotes = (notes, table, tableType) => {
     const tableHeader = getTableHeaderHTML(tableType)
@@ -81,7 +82,7 @@ const setEventListeners = (noteId, div, tableType) => {
 
         const editButton = div.querySelector('.edit')
         editButton.addEventListener('click', () => {
-            showEditForm(noteId, editButton)
+            showForm(formTypes.editNoteForm,noteId)
         })
     } else {
         const unarchiveButton = div.querySelector('.unarchive')
