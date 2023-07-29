@@ -5,14 +5,15 @@ import {archive} from './noteHandlers/archiveNote.js'
 import {unarchive} from './noteHandlers/unarchiveNote.js'
 import {remove} from './noteHandlers/removeNote.js'
 import {showEditForm} from './noteHandlers/editNote.js'
+import {data} from '../../initialData.js'
 
 export const fillTableWithNotes = (notes, table, tableType) => {
-    debugger
     const tableHeader = getTableHeaderHTML(tableType)
     const tableRows = getTableRowsNodes(notes, tableType)
 
     table.innerHTML = tableHeader
     tableRows.forEach(row => table.appendChild(row))
+    console.log(data.notes)
 }
 
 const getTableRowsNodes = (notes, tableType) => {
