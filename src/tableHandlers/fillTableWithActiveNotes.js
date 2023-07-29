@@ -1,7 +1,7 @@
 import {getTableHeaderHTML} from './getTableHeaderHTML.js'
 import {tableTypes} from '../../helpers/tableTypes.js'
 import {iconsPaths} from '../../helpers/iconPaths.js'
-import {archive} from './archiveNote.js'
+import {archive} from './noteHandlers/archiveNote.js'
 
 export const fillTableWithActiveNotes = (notes, table) => {
     const tableHeader = getTableHeaderHTML(tableTypes.activeNotes)

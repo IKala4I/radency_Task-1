@@ -1,7 +1,7 @@
 import {getTableHeaderHTML} from './getTableHeaderHTML.js'
 import {tableTypes} from '../../helpers/tableTypes.js'
 import {iconsPaths} from '../../helpers/iconPaths.js'
-import {archive} from './archiveNote.js'
+import {unarchive} from './noteHandlers/unarchiveNote.js'
 
 export const fillTableWithArchivedNotes = (notes, table) => {
     const tableHeader = getTableHeaderHTML(tableTypes.archivedNotes)
@@ -54,10 +54,10 @@ const createNoteRow = note => {
 
     div.innerHTML = content
 
-    // const unarchiveButton = div.querySelector('.unarchive')
-    // unarchiveButton.addEventListener('click', () => {
-    //     archive(note.id)
-    // })
+    const unarchiveButton = div.querySelector('.unarchive')
+    unarchiveButton.addEventListener('click', () => {
+        unarchive(note.id)
+    })
 
     return div
 }
