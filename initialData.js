@@ -47,7 +47,7 @@ export const data={
             name: 'English',
             created: 'July 29, 2023',
             category: noteCategories.RANDOM_THOUGHT,
-            content: 'I shoudn\'t forget about English',
+            content: 'I shouldn\'t forget about English',
             archived: false
         },
         {
