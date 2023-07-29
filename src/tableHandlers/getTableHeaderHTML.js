@@ -1,6 +1,6 @@
 import {tableTypes} from '../../helpers/tableTypes.js'
 
-export const getTableHeader = typeTable => {
+export const getTableHeaderHTML = typeTable => {
     switch (typeTable) {
         case tableTypes.activeNotes:
             return `<div class="table-header active-notes__table-header active-notes__table-row">

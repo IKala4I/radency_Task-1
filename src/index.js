@@ -1,19 +1,19 @@
 import {fillTableWithNotes} from './tableHandlers/fillTableWithNotes.js'
-import {notes} from '../initialData.js'
+import {data} from '../initialData.js'
 import {fillSummaryTable} from './tableHandlers/fillSummaryTable.js'
 import {renderPage} from './helpers/renderPage.js'
 
-const activeNotes = notes.filter(note => !note.archived)
 const activeNotesTable = document.querySelector('.active-notes')
-
 const summaryTable = document.querySelector('.summary-table')
 
-renderPage({
+export const rerenderApp = (notes = data.notes) => renderPage({
         fillTableWithNotes() {
-            fillTableWithNotes(activeNotes, activeNotesTable)
+            fillTableWithNotes(notes.filter(note => !note.archived), activeNotesTable)
         },
         fillSummaryTable() {
             fillSummaryTable(notes, summaryTable)
         }
     }
 )
+
+rerenderApp()
