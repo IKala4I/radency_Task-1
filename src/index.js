@@ -1,9 +1,9 @@
-import {fillTableWithActiveNotes} from './tableHandlers/fillTableWithActiveNotes.js'
 import {data} from '../initialData.js'
 import {fillSummaryTable} from './tableHandlers/fillSummaryTable.js'
 import {renderPage} from './helpers/renderPage.js'
-import {fillTableWithArchivedNotes} from './tableHandlers/fillTableWithArchivedNotes.js'
 import {toggleVisibilityArchivedNotes} from './tableHandlers/toggleVisibilityArchivedNotes.js'
+import {fillTableWithNotes} from './tableHandlers/fillTableWithNotes.js'
+import {tableTypes} from '../helpers/tableTypes.js'
 
 const activeNotesTable = document.querySelector('.table-active-notes')
 const archivedNotesTable = document.querySelector('.table-archived-notes')
@@ -13,13 +13,13 @@ const showArchivedNotesButton = document.querySelector('.show-archived-notes__bu
 
 export const rerenderApp = (notes = data.notes) => renderPage({
         fillTableWithActiveNotes() {
-            fillTableWithActiveNotes(notes.filter(note => !note.archived), activeNotesTable)
+            fillTableWithNotes(notes.filter(note => !note.archived), activeNotesTable, tableTypes.activeNotes)
         },
         fillSummaryTable() {
             fillSummaryTable(notes, summaryTable)
         },
         fillTableWithArchivedNotes() {
-            fillTableWithArchivedNotes(notes.filter(note => note.archived), archivedNotesTable)
+            fillTableWithNotes(notes.filter(note => note.archived), archivedNotesTable, tableTypes.archivedNotes)
         },
         setHandlerOnShowArchivedNotesButton() {
             toggleVisibilityArchivedNotes(showArchivedNotesButton)
