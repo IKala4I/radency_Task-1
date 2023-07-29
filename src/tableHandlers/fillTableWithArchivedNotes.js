@@ -3,8 +3,8 @@ import {tableTypes} from '../../helpers/tableTypes.js'
 import {iconsPaths} from '../../helpers/iconPaths.js'
 import {archive} from './archiveNote.js'
 
-export const fillTableWithNotes = (notes, table) => {
-    const tableHeader = getTableHeaderHTML(tableTypes.activeNotes)
+export const fillTableWithArchivedNotes = (notes, table) => {
+    const tableHeader = getTableHeaderHTML(tableTypes.archivedNotes)
     const tableRows = getTableRowsNodes(notes)
 
     table.innerHTML = tableHeader
@@ -27,7 +27,7 @@ const createNoteRow = note => {
     const dates = getDatesFromContent(note.content)
 
     const div = document.createElement('div');
-    div.className = 'table-row active-notes__table-row';
+    div.className = 'table-row archived-notes__table-row';
 
     const content = `<div class="table-icon">
                     <img class="table-icon__img" src='${iconsPaths.get(note.category)}' alt="cart">
@@ -39,13 +39,8 @@ const createNoteRow = note => {
                 <span class="note-dates table-row__span">${dates || ''}</span>
                 <div class="tools table-row-tools">
                     <span class="table-row-tools__tool">
-                        <a class="table-row-tools__tool__a edit">
-                            <img class="table-row-tools__tool__img" src="../../images/tools/pencil-tool.svg" alt="edit">
-                        </a>
-                    </span>
-                    <span class="table-row-tools__tool">
-                        <a class="table-row-tools__tool__a archive">
-                            <img class="table-row-tools__tool__img" src="../../images/tools/archive-tool-grey.svg"
+                        <a class="table-row-tools__tool__a unarchive">
+                            <img class="table-row-tools__tool__img" src="../../images/tools/unarchive-tool-grey.svg"
                                  alt="archive">
                         </a>
                     </span>
@@ -59,10 +54,10 @@ const createNoteRow = note => {
 
     div.innerHTML = content
 
-    const archiveButton = div.querySelector('.archive')
-    archiveButton.addEventListener('click', () => {
-        archive(note.id)
-    })
+    // const unarchiveButton = div.querySelector('.unarchive')
+    // unarchiveButton.addEventListener('click', () => {
+    //     archive(note.id)
+    // })
 
     return div
 }

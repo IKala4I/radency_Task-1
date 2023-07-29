@@ -1,5 +1,5 @@
 export const tableTypes = Object.freeze({
-    activeNotes: 'activeNotes',
-    archivedNotes: 'archivedNotes',
+    activeNotes: 'active-notes',
+    archivedNotes: 'archived-notes',
     summary: 'summary'
 })
