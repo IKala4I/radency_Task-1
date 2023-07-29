@@ -1,8 +1,9 @@
 import {createFormHTML} from './createFormHTML.js'
 import {formTypes} from '../../helpers/formTypes.js'
-import {setHandlerOnSubmitEditForm} from './setHandlerOnSubmitEditForm.js'
 import {data} from '../../initialData.js'
-import {setHandlerOnSubmitCreateForm} from './setHandlerOnSubmitCreateForm.js'
+import {setHandlerOnSubmitForm} from './setHandlerOnSubmitForm.js'
+import {createNote} from './createNote.js'
+import {updateNote} from './updateNote.js'
 
 export const showForm = (formType, noteId = null) => {
     const formBlock = document.querySelector('.form-block')
@@ -19,12 +20,14 @@ export const showForm = (formType, noteId = null) => {
         addNoteBlock.style.display = 'flex'
     }
 
-    switch (formType){
+    switch (formType) {
         case formTypes.editNoteForm:
-            setHandlerOnSubmitEditForm(formBlock,addNoteBlock, noteId)
+            setHandlerOnSubmitForm(formBlock, addNoteBlock, updateNote, noteId)
             const nameInput = document.getElementById('name')
             nameInput.placeholder = data.notes[noteId].name
+            break;
         case formTypes.createNoteForm:
-            setHandlerOnSubmitCreateForm(formBlock, addNoteBlock)
+            setHandlerOnSubmitForm(formBlock, addNoteBlock, createNote)
+            break;
     }
 }
