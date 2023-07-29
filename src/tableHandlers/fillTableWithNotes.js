@@ -18,6 +18,7 @@ const getTableRowsNodes = (notes, tableType) => {
 
     notes.forEach(note => {
         const noteRow = createNoteRow(note, tableType)
+        setEventListeners(note.id, noteRow, tableType)
         tableRows.push(noteRow)
     })
 
@@ -60,28 +61,29 @@ const createNoteRow = (note, tableType) => {
                         </a>
                     </span>
                 </div>`
-
-    if (isActiveNotes) {
-        const archiveButton = div.querySelector('.archive')
-        archiveButton.addEventListener('click', () => {
-            archive(note.id)
-        })
-    } else {
-        const unarchiveButton = div.querySelector('.unarchive')
-        unarchiveButton.addEventListener('click', () => {
-            unarchive(note.id)
-        })
-    }
-
-    const removeButton = div.querySelector('.remove')
-    removeButton.addEventListener('click', () => {
-        remove(note.id)
-    })
-
     return div
 }
 
 const getDatesFromContent = content => {
     const dateRegex = /\d{1,2}\/\d{1,2}\/\d{4}/g
     return content.match(dateRegex)?.join(', ')
+}
+
+const setEventListeners = (noteId, div, tableType) => {
+    if (tableType === tableTypes.activeNotes) {
+        const archiveButton = div.querySelector('.archive')
+        archiveButton.addEventListener('click', () => {
+            archive(noteId)
+        })
+    } else {
+        const unarchiveButton = div.querySelector('.unarchive')
+        unarchiveButton.addEventListener('click', () => {
+            unarchive(noteId)
+        })
+    }
+
+    const removeButton = div.querySelector('.remove')
+    removeButton.addEventListener('click', () => {
+        remove(noteId)
+    })
 }
