@@ -40,6 +40,32 @@
                 </span>
                 <button class="action__button">Create Note</button>
             </div>
+            <div class="edit-note-form">
+                <form action="#" class="edit-note-form__form">
+                    <div class="edit-note-form__form__block name-block">
+                        <label for="name">Name:</label>
+                        <textarea class="edit-note-form__form__item" id="name" name="newName"></textarea>
+                    </div>
+                    <div class="edit-note-form__form__block category-block">
+                        <label for="category">Category:</label>
+                        <input class="edit-note-form__form__item" list="category-list" id="category" name="newCategory">
+                        <datalist id="category-list">
+                            <option value="Task"></option>
+                            <option value="Idea"></option>
+                            <option value="Quote"></option>
+                            <option value="Random Thought"></option>
+                        </datalist>
+                    </div>
+                    <div class="edit-note-form__form__block content-block">
+                        <label for="content">Content:</label>
+                        <textarea class="edit-note-form__form__item" id="content" name="newContent"></textarea>
+                    </div>
+                    <div class="buttons">
+                        <button class="action__button" type="submit">Save</button>
+                        <button class="action__button edit-note-form__form__close-button">Close</button>
+                    </div>
+                </form>
+            </div>
         </section>
         <section class="archived-notes">
             <div class="table table-archived-notes"></div>

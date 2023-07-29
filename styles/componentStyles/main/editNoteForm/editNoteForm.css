@@ -1,0 +1,31 @@
+.edit-note-form {
+    display: block;
+}
+
+form.edit-note-form__form {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    font-size: 1.2em;
+}
+
+.edit-note-form__form__block:not(:last-of-type) {
+    margin-bottom: 0.5em;
+}
+
+.edit-note-form__form__item {
+    width: 13em;
+}
+
+#content {
+    height: 4em;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttons button{
+    width: 5em;
+}
