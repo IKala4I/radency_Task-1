@@ -1,8 +1,10 @@
-.active-notes {
+.active-notes,
+.archived-notes {
     margin-top: 1em;
 }
 
-.active-notes__table-row {
+.active-notes__table-row,
+.archived-notes__table-row {
     display: grid;
     grid-template-columns: 5% 15% 15% 10% 30% 15% 10%;
     align-items: center;
