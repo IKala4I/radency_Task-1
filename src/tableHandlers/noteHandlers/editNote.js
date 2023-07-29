@@ -3,7 +3,7 @@ import {rerenderApp} from '../../index.js'
 
 export const showEditForm = noteId => {
     const editBlock = document.querySelector('.edit-note-form')
-    const closeButton = document.querySelector('.edit-note-form__form__close-button')
+    const closeButton = document.querySelector('.form-block__form__close-button')
     const nameInput = document.getElementById('name')
 
     const addNoteBlock = document.querySelector('.add-note')
