@@ -40,68 +40,12 @@
                 </span>
                 <button class="action__button">Create Note</button>
             </div>
-            <div class="form-block edit-note-form">
-                <form action="#" class="form-block__form edit-note-form__form">
-                    <div class="form-block__form__field name-block">
-                        <label for="name">Name: (Optional)</label>
-                        <input class="form-block__form__field__item" id="name" name="name" pattern=".{3,}|^$">
-                    </div>
-                    <div class="form-block__form__field category-block">
-                        <label for="category">Category:</label>
-                        <input class="form-block__form__field__item" list="category-list" id="category" name="category"
-                               placeholder="Choose a category"
-                               required>
-                        <datalist id="category-list">
-                            <option value="Task"></option>
-                            <option value="Idea"></option>
-                            <option value="Quote"></option>
-                            <option value="Random Thought"></option>
-                        </datalist>
-                    </div>
-                    <div class="form-block__form__field content-block">
-                        <label for="content">Content: (Optional)</label>
-                        <textarea class="form-block__form__field__item" id="content" name="content"></textarea>
-                    </div>
-                    <div class="buttons">
-                        <button class="action__button" type="submit">Save</button>
-                        <button class="action__button form-block__form__close-button">Close</button>
-                    </div>
-                </form>
-            </div>
-            <div class="form-block create-note-form">
-                <form action="#" class="form-block__form create-note-form__form">
-                    <div class="form-block__form__field name-block">
-                        <label for="name1">Name:</label>
-                        <input class="form-block__form__field__item" id="name1" name="name" pattern=".{3,}|^$">
-                    </div>
-                    <div class="form-block__form__field category-block">
-                        <label for="category1">Category:</label>
-                        <input class="form-block__form__field__item" list="category-list" id="category1" name="category"
-                               placeholder="Choose a category"
-                               required>
-                        <datalist id="category-list1">
-                            <option value="Task"></option>
-                            <option value="Idea"></option>
-                            <option value="Quote"></option>
-                            <option value="Random Thought"></option>
-                        </datalist>
-                    </div>
-                    <div class="form-block__form__field content-block">
-                        <label for="content1">Content:</label>
-                        <textarea class="form-block__form__field__item" id="content1" name="content"></textarea>
-                    </div>
-                    <div class="buttons">
-                        <button class="action__button" type="submit">Save</button>
-                        <button class="action__button form-block__form__close-button">Close</button>
-                    </div>
-                </form>
-            </div>
+            <div class="form-block"></div>
         </section>
         <section class="archived-notes">
             <div class="table table-archived-notes"></div>
         </section>
-        <section class="table summary-table">
-        </section>
+        <section class="table summary-table"></section>
     </div>
 </main>
 <script type="module" src="./src/index.js"></script>

@@ -4,8 +4,7 @@ import {iconsPaths} from '../../helpers/iconPaths.js'
 import {archive} from './noteHandlers/archiveNote.js'
 import {unarchive} from './noteHandlers/unarchiveNote.js'
 import {remove} from './noteHandlers/removeNote.js'
-import {data} from '../../initialData.js'
-import {formTypes} from '../../helpers/formTypes'
+import {formTypes} from '../../helpers/formTypes.js'
 import {showForm} from '../formHandlers/showForm.js'
 
 export const fillTableWithNotes = (notes, table, tableType) => {
@@ -14,7 +13,6 @@ export const fillTableWithNotes = (notes, table, tableType) => {
 
     table.innerHTML = tableHeader
     tableRows.forEach(row => table.appendChild(row))
-    console.log(data.notes)
 }
 
 const getTableRowsNodes = (notes, tableType) => {
