@@ -1,4 +1,4 @@
-.active-notes{
+.active-notes {
     margin-top: 1em;
 }
 
@@ -8,6 +8,10 @@
     align-items: center;
     padding: 7px;
     font-size: 1.2em;
+}
+
+.note-content {
+    padding: 0 0.5em;
 }
 
 .tools {
@@ -24,7 +28,7 @@
     padding-right: 10px;
 }
 
-.table-icon{
+.table-icon {
     display: flex;
 }
 
