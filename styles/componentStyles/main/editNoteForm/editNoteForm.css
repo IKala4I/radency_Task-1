@@ -1,5 +1,6 @@
 .edit-note-form {
-    display: block;
+    display: none;
+    margin-top: 2em;
 }
 
 form.edit-note-form__form {
@@ -18,7 +19,7 @@ form.edit-note-form__form {
 }
 
 #content {
-    height: 4em;
+    height: 2em;
 }
 
 .buttons {

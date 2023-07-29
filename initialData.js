@@ -3,7 +3,7 @@ import {noteCategories} from './helpers/noteCategories.js'
 export const data={
     notes: [
         {
-            id: 1,
+            id: 0,
             name: 'Dentist',
             created: 'April 20, 2021',
             category: noteCategories.TASK,
@@ -11,7 +11,7 @@ export const data={
             archived: false
         },
         {
-            id: 2,
+            id: 1,
             name: 'The theory of evolution',
             created: 'April 27, 2021',
             category: noteCategories.RANDOM_THOUGHT,
@@ -19,7 +19,7 @@ export const data={
             archived: true
         },
         {
-            id: 3,
+            id: 2,
             name: 'New Feature',
             created: 'May 05, 2021',
             category: noteCategories.IDEA,
@@ -27,7 +27,7 @@ export const data={
             archived: false
         },
         {
-            id: 4,
+            id: 3,
             name: 'William Gaddis',
             created: 'May 07, 2021',
             category: noteCategories.QUOTE,
