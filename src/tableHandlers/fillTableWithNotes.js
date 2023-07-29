@@ -3,6 +3,7 @@ import {tableTypes} from '../../helpers/tableTypes.js'
 import {iconsPaths} from '../../helpers/iconPaths.js'
 import {archive} from './noteHandlers/archiveNote.js'
 import {unarchive} from './noteHandlers/unarchiveNote.js'
+import {remove} from './noteHandlers/removeNote.js'
 
 export const fillTableWithNotes = (notes, table, tableType) => {
     const tableHeader = getTableHeaderHTML(tableType)
@@ -32,7 +33,7 @@ const createNoteRow = (note, tableType) => {
     const div = document.createElement('div');
     div.className = `table-row ${tableType}__table-row`;
 
-    const content = `<div class="table-icon">
+    div.innerHTML = `<div class="table-icon">
                     <img class="table-icon__img" src='${iconsPaths.get(note.category)}' alt="cart">
                 </div>
                 <span class="note-name table-row__span">${note.name}</span>
@@ -60,9 +61,7 @@ const createNoteRow = (note, tableType) => {
                     </span>
                 </div>`
 
-    div.innerHTML = content
-
-    if (tableType === tableTypes.activeNotes) {
+    if (isActiveNotes) {
         const archiveButton = div.querySelector('.archive')
         archiveButton.addEventListener('click', () => {
             archive(note.id)
@@ -73,6 +72,11 @@ const createNoteRow = (note, tableType) => {
             unarchive(note.id)
         })
     }
+
+    const removeButton = div.querySelector('.remove')
+    removeButton.addEventListener('click', () => {
+        remove(note.id)
+    })
 
     return div
 }

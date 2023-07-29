@@ -6,4 +6,3 @@ export const archive = (noteId) => {
     data.notes = updateObjectInArray(data.notes, noteId, 'id', {archived: true})
     rerenderApp()
 }
-
