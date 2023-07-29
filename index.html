@@ -40,15 +40,16 @@
                 </span>
                 <button class="action__button">Create Note</button>
             </div>
-            <div class="edit-note-form">
-                <form action="#" class="edit-note-form__form">
-                    <div class="edit-note-form__form__block name-block">
-                        <label for="name">Name:</label>
-                        <input class="edit-note-form__form__item" id="name" name="name" pattern=".{3,}|^$">
+            <div class="form-block edit-note-form">
+                <form action="#" class="form-block__form edit-note-form__form">
+                    <div class="form-block__form__field name-block">
+                        <label for="name">Name: (Optional)</label>
+                        <input class="form-block__form__field__item" id="name" name="name" pattern=".{3,}|^$">
                     </div>
-                    <div class="edit-note-form__form__block category-block">
+                    <div class="form-block__form__field category-block">
                         <label for="category">Category:</label>
-                        <input class="edit-note-form__form__item" list="category-list" id="category" name="category"
+                        <input class="form-block__form__field__item" list="category-list" id="category" name="category"
+                               placeholder="Choose a category"
                                required>
                         <datalist id="category-list">
                             <option value="Task"></option>
@@ -57,9 +58,9 @@
                             <option value="Random Thought"></option>
                         </datalist>
                     </div>
-                    <div class="edit-note-form__form__block content-block">
-                        <label for="content">Content:</label>
-                        <textarea class="edit-note-form__form__item" id="content" name="content"></textarea>
+                    <div class="form-block__form__field content-block">
+                        <label for="content">Content: (Optional)</label>
+                        <textarea class="form-block__form__field__item" id="content" name="content"></textarea>
                     </div>
                     <div class="buttons">
                         <button class="action__button" type="submit">Save</button>
@@ -67,15 +68,16 @@
                     </div>
                 </form>
             </div>
-            <div class="create-note-form">
-                <form action="#" class="create-note-form__form">
-                    <div class="create-note-form__form__block name-block">
+            <div class="form-block create-note-form">
+                <form action="#" class="form-block__form create-note-form__form">
+                    <div class="form-block__form__field name-block">
                         <label for="name1">Name:</label>
-                        <input class="create-note-form__form__item" id="name1" name="name" pattern=".{3,}|^$">
+                        <input class="form-block__form__field__item" id="name1" name="name" pattern=".{3,}|^$">
                     </div>
-                    <div class="create-note-form__form__block category-block">
+                    <div class="form-block__form__field category-block">
                         <label for="category1">Category:</label>
-                        <input class="create-note-form__form__item" list="category-list" id="category1" name="category"
+                        <input class="form-block__form__field__item" list="category-list" id="category1" name="category"
+                               placeholder="Choose a category"
                                required>
                         <datalist id="category-list1">
                             <option value="Task"></option>
@@ -84,9 +86,9 @@
                             <option value="Random Thought"></option>
                         </datalist>
                     </div>
-                    <div class="create-note-form__form__block content-block">
+                    <div class="form-block__form__field content-block">
                         <label for="content1">Content:</label>
-                        <input class="edit-note-form__form__item" id="content1" name="content" pattern=".{3,}|^$">
+                        <textarea class="form-block__form__field__item" id="content1" name="content"></textarea>
                     </div>
                     <div class="buttons">
                         <button class="action__button" type="submit">Save</button>

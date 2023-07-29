@@ -1,0 +1,33 @@
+.form-block {
+    display: block;
+    margin-top: 2em;
+}
+
+.form-block__form {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    font-size: 1.2em;
+}
+
+.form-block__form__field:not(:last-of-type) {
+    margin-bottom: 0.5em;
+}
+
+.form-block__form__field__item {
+    width: 13em;
+}
+
+#content,
+#content1 {
+    height: 4em;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttons button {
+    width: 5em;
+}

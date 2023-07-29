@@ -3,8 +3,7 @@
 @import './notes/notes.css';
 @import './notes/activeNotes/activeNotes.css';
 @import './notes/archivedNotes/archivedNotes.css';
-@import './editNoteForm/editNoteForm.css';
-@import './createNoteForm/createNoteForm.css';
+@import './editAndCreateForms/editAndCreateForms.css';
 
 .action {
     display: flex;
