@@ -2,6 +2,7 @@ import {createFormHTML} from './createFormHTML.js'
 import {formTypes} from '../../helpers/formTypes.js'
 import {setHandlerOnSubmitEditForm} from './setHandlerOnSubmitEditForm.js'
 import {data} from '../../initialData.js'
+import {setHandlerOnSubmitCreateForm} from './setHandlerOnSubmitCreateForm.js'
 
 export const showForm = (formType, noteId = null) => {
     const formBlock = document.querySelector('.form-block')
@@ -23,5 +24,7 @@ export const showForm = (formType, noteId = null) => {
             setHandlerOnSubmitEditForm(formBlock,addNoteBlock, noteId)
             const nameInput = document.getElementById('name')
             nameInput.placeholder = data.notes[noteId].name
+        case formTypes.createNoteForm:
+            setHandlerOnSubmitCreateForm(formBlock, addNoteBlock)
     }
 }
