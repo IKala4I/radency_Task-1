@@ -4,19 +4,20 @@
 @import './notes/activeNotes/activeNotes.css';
 @import './notes/archivedNotes/archivedNotes.css';
 @import './editNoteForm/editNoteForm.css';
+@import './createNoteForm/createNoteForm.css';
 
-.action{
+.action {
     display: flex;
     padding: 10px 0;
     align-items: center;
 }
 
-.action__img{
+.action__img {
     width: 1.7em;
     margin-right: 5px;
 }
 
-.action__button{
+.action__button {
     padding: 5px;
     font-size: 1.2em;
     border-radius: 10px;

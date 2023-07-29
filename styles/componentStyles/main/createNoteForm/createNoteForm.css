@@ -1,0 +1,32 @@
+.create-note-form {
+    display: block;
+    margin-top: 2em;
+}
+
+.create-note-form__form {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    font-size: 1.2em;
+}
+
+.create-note-form__form__block:not(:last-of-type) {
+    margin-bottom: 0.5em;
+}
+
+.create-note-form__form__item {
+    width: 13em;
+}
+
+#content {
+    height: 2em;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttons button{
+    width: 5em;
+}
