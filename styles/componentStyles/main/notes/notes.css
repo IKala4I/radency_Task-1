@@ -1,0 +1,39 @@
+.table-active-notes,
+.table-archived-notes {
+    margin-top: 1em;
+}
+
+.active-notes__table-row,
+.archived-notes__table-row {
+    display: grid;
+    grid-template-columns: 5% 15% 15% 10% 30% 15% 10%;
+    align-items: center;
+    padding: 7px;
+    font-size: 1.2em;
+}
+
+.note-content {
+    padding: 0 0.5em;
+}
+
+.tools {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tools img {
+    width: 1.5em;
+    cursor: pointer;
+}
+
+.tools span:not(:last-child) {
+    padding-right: 10px;
+}
+
+.table-icon {
+    display: flex;
+}
+
+.table-icon__img {
+    width: 2em;
+}

@@ -1,0 +1,12 @@
+.summary-table {
+    margin-top: 5em;
+    margin-bottom: 2em;
+}
+
+.summary-table__table-row {
+    display: grid;
+    grid-template-columns: 5% 40% 20% 30%;
+    align-items: center;
+    padding: 7px;
+    font-size: 1.2em;
+}
